@@ -15,14 +15,14 @@ namespace Web
         /// <param name="args">The arguments.</param>
         public static async Task Main(string[] args)
         {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            WebAssemblyHostBuilder builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped(sp =>
             {
-                var customHandler = new CustomHttpHandler(sp.GetRequiredService<IJSRuntime>())
+                CustomHttpHandler customHandler = new CustomHttpHandler(sp.GetRequiredService<IJSRuntime>())
                 {
                     InnerHandler = new HttpClientHandler()
                 };

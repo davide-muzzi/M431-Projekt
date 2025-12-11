@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DTOs\Auth\b4q24kxc.jyx~" />
+  </ItemGroup>
+
 </Project>
