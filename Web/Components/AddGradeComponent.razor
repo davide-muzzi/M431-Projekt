@@ -1,0 +1,110 @@
+﻿
+
+<h2 class="text-center p-4">Neue Note Hinzufügen</h2>
+
+<div class="text-center">
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gradeModal">
+		Neue Note hinzufügen
+	</button>
+</div>
+
+<div class="modal fade" id="gradeModal" tabindex="-1" aria-labelledby="gradeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gradeModalLabel">Neue Note Hinzufügen</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label">Name des Schülers</label>
+                        <input type="text" class="form-control" id="studentName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="teacherName" class="form-label">Name der Lehrperson</label>
+                        <input type="text" class="form-control" id="teacherName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="principalName" class="form-label">Name des Rektors</label>
+                        <input type="text" class="form-control" id="principalName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="module" class="form-label">Modul</label>
+                        <input type="text" class="form-control" id="module">
+                    </div>
+                    <div class="mb-3">
+                        <label for="examDate" class="form-label">Datum der Prüfung</label>
+                        <input type="date" class="form-control" id="examDate">
+                    </div>
+                    <div class="mb-3">
+                        <label for="grade" class="form-label">Note</label>
+                        <input type="text" class="form-control" id="grade">
+                    </div>
+                    <div class="mb-3">
+                        <label for="late" class="form-label">Verspätet?</label>
+                        <select class="form-select" id="late">
+                            <option value="Nein">Nein</option>
+                            <option value="Ja">Ja</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Neue Note erstellen</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Erfassen</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="container py-4">
+    <h1 class="h4 mb-3">Übersicht der Abgaben</h1>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Schüler Name</th>
+            <th scope="col">ModulName</th>
+            <th scope="col">Prorektor</th>
+            <th scope="col">Status Abgabe</th>
+            <th scope="col">Note</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Endstatus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Schüler Name</td>
+            <td>ModulName</td>
+            <td>Prorektor</td>
+            <td><span class="on-time">Nicht verspätet</span></td>
+            <td>6</td>
+            <td>12.Dez.2025</td>
+            <td><span class="badge-status status-erfasst">Erfasst</span></td>
+          </tr>
+          <tr>
+            <td>Schüler Name</td>
+            <td>ModulName</td>
+            <td>Prorektor</td>
+            <td><span class="late">Verspätet!</span></td>
+            <td>6</td>
+            <td>10.Nov.2025</td>
+            <td><span class="badge-status status-anfrage">Anfrage gestellt</span></td>
+          </tr>
+          <tr>
+            <td>Schüler Name</td>
+            <td>ModulName</td>
+            <td>Prorektor</td>
+            <td><span class="on-time">Nicht verspätet</span></td>
+            <td>6</td>
+            <td>05.Okt.2025</td>
+            <td><span class="badge-status status-erfasst">Erfasst</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
